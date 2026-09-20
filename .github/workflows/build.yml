@@ -23,9 +23,8 @@ jobs:
         sudo apt-get install -y build-essential libssl-dev libffi-dev python3-dev zip unzip openjdk-17-jdk git ffmpeg libltdl-dev autoconf libtool pkg-config
         pip install --upgrade buildozer cython==0.29.33
 
-    - name: Initialize and Build with Buildozer
+    - name: Build with Buildozer
       run: |
-        buildozer init
         yes | buildozer -v android debug
 
     - name: Upload APK Artifact
